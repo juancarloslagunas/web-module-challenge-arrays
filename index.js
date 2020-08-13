@@ -129,10 +129,13 @@ Your function should accept:
 
 and should return a new array that is identical to the old array. You can name the new array however you'd like. */
 
-function copy(arr){
- for(let i = 0; i<arr.length; i++){
-     const newArr = [...arr[i]];
- }
+function copy(arr, arr2){
+    arr2 = [...arr];
+    for(let i = 0; i< arr.length; i++){
+        if(arr2[i] = arr[i]){
+            return arr2;
+         }
+    }    
 }
 console.log(copy(originalFlavors));
 
@@ -168,7 +171,7 @@ function contains(arr, string,){
     }
     return newArr;
 }
-console.log(contains(originalFlavors, 'Rainbow Sherbert'));
+console.log(contains(originalFlavors, 'Chocolate'));
 
 
 
